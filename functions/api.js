@@ -9,7 +9,7 @@ const envFile = process.env.NODE_ENV === 'production' ? '.env.production' : '.en
 dotenv.config({ path: envFile });
 
 router.get('/', (req, res) => {
-    res.send('Hello World from Netlify Lambda!');
+    res.send('Hello World from development Netlify Lambda!');
 });
 
 app.use('/.netlify/functions/api', router); // path must route to lambda
