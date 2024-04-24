@@ -11,10 +11,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node api.js",
+    "start:dev": "NODE_ENV=development node functions/api.js",
+    "start:prod": "NODE_ENV=production node functions/api.js",
     "build": "echo 'Build steps can be placed here'",
-    "deploy:dev": "netlify deploy --site f21c08db-6a59-47e8-8a47-814b2903e530 --dir=dist --prod",
-    "deploy:prod": "netlify deploy --site c6473265-ff89-4857-8d41-49e7600c77ee --dir=dist --prod"
+    "deploy:dev": "netlify deploy --site ${NETLIFY_SITE_ID} --dir=dist",
+    "deploy:prod": "netlify deploy --site ${NETLIFY_SITE_ID} --dir=dist --prod"
   },
   "author": "",
   "license": "ISC",
