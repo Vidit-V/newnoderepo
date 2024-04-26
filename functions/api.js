@@ -13,7 +13,7 @@ const router = express.Router();
 
 
 router.get('/', (req, res) => {
-    res.send('Hell ooobhaiiiiiprodcution sadmska cicccciddddd');
+    res.send('Hell this is pushed from developmetn');
 });
 
 app.use('/.netlify/functions/api', router); // path must route to lambda
